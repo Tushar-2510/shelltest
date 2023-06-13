@@ -9,8 +9,6 @@ jobs:
 
   runs-on: ubuntu-latest
   steps:
-    - checkout
-    - run:
-       name: Magic Pod E2E test
-       id: bash run_magic_pod_test.sh
+      - name: Magic Pod E2E test
+      - id: bash run_magic_pod_test.sh
     

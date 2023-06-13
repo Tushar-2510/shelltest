@@ -10,5 +10,5 @@ jobs:
   runs-on: ubuntu-latest
   steps:
       - name: Magic Pod E2E test
-      - id: bash run_magic_pod_test.sh
+      - id: bash shelltest/.github/spotify.sh
     

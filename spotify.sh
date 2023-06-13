@@ -11,8 +11,8 @@ access="$(curl -X POST "https://accounts.spotify.com/api/token" \
 #      -H "Authorization: Bearer $access"
 #Only valid bearer
 #bear=BQA3wjD0IR-ey81hCeloDQ9xQL_g5acIKNKyNrIuVvUXGnYyR3BarkcNWLC23PQdIHfmS9Y2PbbSIwesOBf9MNub51HTAiFBf36guONrj0ktpaOmalo
-echo "your artist you want to print album"
-read Artist
+Artist="Shreya Ghosal"
+echo "your artist you want to print album $Artist"
 Artist=$(echo $Artist | tr ' ' '+')
 
 id=`curl --request GET \

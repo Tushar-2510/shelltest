@@ -1,14 +1,12 @@
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+name: create-map
+on: push
 jobs:
- build:
-
-  runs-on: ubuntu-latest
-  steps:
-      - name: Magic Pod E2E test
-      - id: bash shelltest/.github/spotify.sh
-    
+  run_tests:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run script file
+      run: |
+         chmod +x ./spotify.sh
+         ./spotify.sh
+      shell: bash

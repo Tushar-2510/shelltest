@@ -1,0 +1,16 @@
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+ build:
+
+  runs-on: ubuntu-latest
+  steps:
+    - checkout
+    - run:
+       name: Magic Pod E2E test
+       id: bash run_magic_pod_test.sh
+    

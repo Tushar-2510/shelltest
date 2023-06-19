@@ -4,7 +4,7 @@
 
 access="$(curl -X POST "https://accounts.spotify.com/api/token" \
      -H "Content-Type: application/x-www-form-urlencoded" \
-     -d "grant_type=client_credentials&client_id=${{ secrets.CLIENT_ID }}&client_secret=${{ secrets.CLIENT_SECRET}}" \
+     -d "grant_type=client_credentials&client_id=$client_id&client_secret=$client_secret" \
      | jq -r '. | .access_token')"  
 # echo $access
 # curl "https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb" \
